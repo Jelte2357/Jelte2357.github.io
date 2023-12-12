@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="AdventOfCode.png">
+        <title>Jelte2357's Website - Advent Of Code</title>
+        <script>
+            function changeColors() {
+                const textElement = document.getElementById('CTree');
+                let text = textElement.innerText;
+                let coloredText = '';
+
+                const colors = ['yellow', 'red', 'orange', 'cyan', 'blue', 'purple', 'magenta', '#0f0'];
+
+                for (let i = 0; i < text.length; i++) {
+                    if (text[i] === '*') {
+                    const randIndex = Math.floor(Math.random() * colors.length);
+                    const color = colors[randIndex];
+                    coloredText += `<span style="color: ${color};">*</span>`;
+                    } else {
+                    coloredText += text[i];
+                    }
+                }
+
+                textElement.innerHTML = coloredText;
+            }
+
+            setInterval(changeColors, 250);
+
+        </script>
+    </head>
+    <body>
+        <a href="index.html">Return To Homepage</a>
+        <h1>Hello, im Jelte2357 - This is Advent Of Code</h1>
+        Time For Winter
+        <hr class="horizonal-line">
+        Please note that this page may only look good on a laptop, or on wide enough screens
+        <hr class="horizonal-line">
+        <pre id="CTree">
+                  **
+                 *****
+                What*is*
+            advent*of*code?*
+          Advent*of*code*is*a*
+       yearly*challenge*in*december
+      *in*which*you*have*to*complete
+     *24*(increasingly*more*difficult
+    )*coding*challenges.*While*I've*seen
+  ***it*happen*the*past*2*years,*I*did*not*
+compete*until*this*year.*I*decided*to*compete,
+        *as*it*could*better*my*python*
+       skills,*and*possibly*help*with*
+      the*intake*of*a*study*I*would*want.*
+    *********I*really*liked*the***********
+   challenges*so*far,*they*have*you*thinking
+*critically*about*what*your*program*should*do,
+         *and*why*specific*operations
+       *take*way*more*time*than*others,
+       *like*how*list*comprehention*is
+    *way*faster*than*appending*to*a*list.
+  *****************************************
+ I*will*try*to*solve*all*puzzles*of*this*year.
+                **********
+                 So,*have*a
+              *nice*christmas*</pre>
+        <hr class="horizonal-line">
+        <p>
+            <h5>Made for CS50X 2023</h5>
+        </p>
+    </body>
+</html>
